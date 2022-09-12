@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -26,13 +27,13 @@ public class Account {
 
     @NotBlank(message = "Date of Birth is required")
     @Column(nullable = false)
-    private String DOB;
+    private String dob;
 
     @NotBlank(message = "Are you a Buyer or Seller?")
     @Column(nullable = false)
     private String permission;
 
-    @NotBlank(message = "Pin is required")
+    @NotNull(message = "Pin is required")
     @Column(nullable = false)
     private Integer pin;
 
