@@ -21,6 +21,7 @@ public class Account {
     @Column(nullable = false)
     private String phone;
 
+    @Column(nullable = false)
     private String email;
 
     @NotBlank(message = "Date of Birth is required")
