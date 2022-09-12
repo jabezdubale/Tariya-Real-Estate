@@ -2,10 +2,9 @@ package com.tariyarealestate.tariyarealestate.domains;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -15,16 +14,27 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
+    @NotBlank(message = "Name is required")
+    @Column(nullable = false)
     private String fullName;
 
+    @NotBlank(message = "Phone number is required")
+    @Column(nullable = false)
     private String phone;
 
+    @Column(nullable = false)
     private String email;
 
-    private String DOB;
+    @NotBlank(message = "Date of Birth is required")
+    @Column(nullable = false)
+    private String dob;
 
+    @NotBlank(message = "Are you a Buyer or Seller?")
+    @Column(nullable = false)
     private String permission;
 
+    @NotNull(message = "Pin is required")
+    @Column(nullable = false)
     private Integer pin;
 
 
