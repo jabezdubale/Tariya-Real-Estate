@@ -38,5 +38,4 @@ public class Account {
     @Column(nullable = false)
     private Integer pin;
 
-
 }
