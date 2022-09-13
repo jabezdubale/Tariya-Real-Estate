@@ -28,6 +28,7 @@ public class Account {
 
     @NotNull(message = "Date of Birth is required")
     @Column(nullable = false)
+    @Temporal(TemporalType.DATE)
     private Date dob;
 
     @NotBlank(message = "Are you a Buyer or Seller?")
