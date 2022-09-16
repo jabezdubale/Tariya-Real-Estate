@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.tariyarealestate</groupId>
 	<artifactId>tariyarealestate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>tariyarealestate</name>
 	<description>ACT (American College of Technology) Capstone project by Yabetse Dubale and Selamawit Hunegnaw</description>
 	<properties>
