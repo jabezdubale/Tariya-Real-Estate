@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,3 +17,15 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{sercrets.HEROKU_API_KEY}}
+          heroku_app_name: "tariya-real-estate"
+          heroku_email: "jabezdubale6@gmail.com"
+          healthcheck: "https://tariya-real-estate.herokuapp.com/actuator/health"
