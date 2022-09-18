@@ -44,8 +44,12 @@ public class RealEstate {
     @Column(nullable = false)
     private String verificationDocs;
 
-    private Long verificationStatus=0L;
+    @NotNull(message = "verification status")
+    @Column(nullable = false)
+    private Long verificationStatus;
 
+    @NotBlank(message = "Current status of the house")
+    @Column(nullable = false)
     private String houseStatus;
 
 }

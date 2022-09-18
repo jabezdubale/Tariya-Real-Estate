@@ -1,8 +1,8 @@
 package com.tariyarealestate.tariyarealestate.controllers;
 
-import com.tariyarealestate.tariyarealestate.domains.Account;
 import com.tariyarealestate.tariyarealestate.domains.RealEstate;
-import com.tariyarealestate.tariyarealestate.services.AccountService;
+import com.tariyarealestate.tariyarealestate.dto.RealEstateDelete;
+import com.tariyarealestate.tariyarealestate.dto.RealEstateEditor;
 import com.tariyarealestate.tariyarealestate.services.RealEstateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,4 +26,13 @@ public class RealEstateController {
         return realEstateService.showrealEstate();
     }
 
+    @PostMapping("/api/realestate/edit")
+    public RealEstate editRs(@RequestBody RealEstateEditor rsEditor) throws Exception {
+        return realEstateService.editRealEstate(rsEditor);
+    }
+
+    @PostMapping("/api/realestate/delete")
+    public void deleteRs(@RequestBody RealEstateDelete rsDelete) throws Exception {
+        realEstateService.deleteRealEstate(rsDelete);
+    }
 }
