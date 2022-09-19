@@ -28,13 +28,15 @@ public class HouseCreationIntegrationTest {
 
         //Given
         String payload = "{\n" +
-                "  \"sellerId\": 4,\n" +
-                "  \"location\": \"googlelink1\",\n" +
-                "  \"houseType\": \"Mansion\",\n" +
-                "  \"price\": 2600.65,\n" +
-                "  \"description\": \"The house is super big that you can bring a horse in the salon\",\n" +
-                "  \"verificationDocs\": \"VerificationDoc1\"\n" +
-                "}";
+                "  \"sellerId\": 1,\n" +
+                "  \"location\": \"Test location\",\n" +
+                "  \"houseType\": \"Condominium\",\n" +
+                "  \"price\": 2600456.65,\n" +
+                "  \"description\": \"Test description\",\n" +
+                "  \"verificationDocs\": \"VerificationDoc1\",\n" +
+                "  \"houseStatus\": \"Sold\",\n" +
+                "  \"verificationStatus\": 0\n" +
+                "}\n";
 
         //When
         mockMvc.perform(
