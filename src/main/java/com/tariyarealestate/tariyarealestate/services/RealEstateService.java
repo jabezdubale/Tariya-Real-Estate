@@ -1,8 +1,10 @@
 package com.tariyarealestate.tariyarealestate.services;
 
+import com.tariyarealestate.tariyarealestate.domains.Account;
 import com.tariyarealestate.tariyarealestate.domains.RealEstate;
 import com.tariyarealestate.tariyarealestate.dto.RealEstateDelete;
 import com.tariyarealestate.tariyarealestate.dto.RealEstateEditor;
+import com.tariyarealestate.tariyarealestate.repositories.AccountRepository;
 import com.tariyarealestate.tariyarealestate.repositories.RealEstateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,8 +15,17 @@ public class RealEstateService {
     @Autowired
     private RealEstateRepository realEstateRepository;
 
-    public RealEstate createRealEstate(RealEstate realEstate){
-        return realEstateRepository.save(realEstate);
+    @Autowired
+    private AccountRepository accountRepository;
+
+    public RealEstate createRealEstate(RealEstate realEstate) throws Exception {
+        Account account = accountRepository.findById(realEstate.getSellerId()).get();
+        if (account == null || !account.getPermission().equals("Seller")) {
+            throw new Exception();
+        }
+        else {
+            return realEstateRepository.save(realEstate);
+        }
     }
 
     public Iterable<RealEstate> showrealEstate (){

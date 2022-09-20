@@ -17,7 +17,7 @@ public class RealEstateController {
     private RealEstateService realEstateService;
 
     @PostMapping("/api/realestate/create")
-    public RealEstate createAccount(@RequestBody RealEstate realEstate){
+    public RealEstate createAccount(@RequestBody RealEstate realEstate) throws Exception {
         return realEstateService.createRealEstate(realEstate);
     }
 
