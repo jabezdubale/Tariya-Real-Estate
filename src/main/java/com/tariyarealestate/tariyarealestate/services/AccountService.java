@@ -1,7 +1,10 @@
 package com.tariyarealestate.tariyarealestate.services;
 
 import com.tariyarealestate.tariyarealestate.domains.Account;
+import com.tariyarealestate.tariyarealestate.domains.RealEstate;
+import com.tariyarealestate.tariyarealestate.dto.AccountDelete;
 import com.tariyarealestate.tariyarealestate.dto.AccountEditor;
+import com.tariyarealestate.tariyarealestate.dto.RealEstateDelete;
 import com.tariyarealestate.tariyarealestate.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +50,16 @@ public class  AccountService {
         }
 
         return accountRepository.save(edittedAccount);
+    }
+
+    public void deleteAccount(AccountDelete acDelete) throws Exception {
+        Account deleteAcct = accountRepository.findById(acDelete.getDeleteId()).get();
+        if (deleteAcct == null){
+            throw new Exception();
+        }
+        else {
+            accountRepository.deleteById(acDelete.getDeleteId());
+        }
     }
 
 }
