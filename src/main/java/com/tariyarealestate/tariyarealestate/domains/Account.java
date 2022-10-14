@@ -41,8 +41,8 @@ public class Account {
     @Column(nullable = false)
     private String permission;
 
-    @NotNull(message = "Pin is required")
+    @NotBlank(message = "Pin is required")
     @Column(nullable = false)
-    private Integer pin;
+    private String pin;
 
 }

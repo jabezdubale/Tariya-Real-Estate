@@ -18,7 +18,7 @@ public class AccountEditor {
     @Temporal(TemporalType.DATE)
     private Date editorDOB;
     private String editorPermission;
-    private Integer editorPin;
+    private String editorPin;
 
 
 }
