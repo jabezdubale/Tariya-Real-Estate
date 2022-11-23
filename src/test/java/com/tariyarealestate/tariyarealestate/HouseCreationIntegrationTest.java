@@ -29,13 +29,13 @@ public class HouseCreationIntegrationTest {
         //Given
         String payload = "{\n" +
                 "  \"sellerId\": 1,\n" +
-                "  \"location\": \"Test location\",\n" +
+                "  \"locationLatitude\": \"Testers9\",\n" +
+                "  \"locationLongitude\": \"Testers9\", \n" +
                 "  \"houseType\": \"Condominium\",\n" +
                 "  \"price\": 2600456.65,\n" +
                 "  \"description\": \"Test description\",\n" +
                 "  \"verificationDocs\": \"VerificationDoc1\",\n" +
                 "  \"houseStatus\": \"Sold\",\n" +
-                "  \"verificationStatus\": 0\n" +
                 "}\n";
 
         //When
