@@ -31,6 +31,9 @@ public class  AccountService {
         if (accountEditor.getEditorName() != null){
             edittedAccount.setFullName(accountEditor.getEditorName());
         }
+        if (accountEditor.getEditorPropic() != null){
+            edittedAccount.setProfilePicture(accountEditor.getEditorPropic());
+        }
         if (accountEditor.getEditorPhone() != null){
             edittedAccount.setPhone(accountEditor.getEditorPhone());
         }

@@ -24,9 +24,13 @@ public class RealEstate {
     @Column(nullable = false)
     private Long sellerId;
 
-    @NotBlank(message = "Please insert the google location")
-    @Column(nullable = false, unique = true)
-    private String location;
+    @NotBlank(message = "Please insert the google Latitude location")
+    @Column(nullable = false)
+    private String locationLatitude;
+
+    @NotBlank(message = "Please insert the google Longitude location")
+    @Column(nullable = false)
+    private String locationLongitude;
 
     @NotBlank(message = "Write the type of Real-Estate?")
     @Column(nullable = false)
@@ -36,6 +40,8 @@ public class RealEstate {
     @Column(nullable = false)
     private Double price;
 
+    private String rsPictures = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
     @NotBlank(message = "Specify as much detail about the Real-Estate as possible")
     @Column(nullable = false)
     private String description;
@@ -44,12 +50,8 @@ public class RealEstate {
     @Column(nullable = false)
     private String verificationDocs;
 
-    @NotNull(message = "verification status")
-    @Column(nullable = false)
-    private Long verificationStatus;
+    private Long verificationStatus = 0L;
 
-    @NotBlank(message = "Current status of the house")
-    @Column(nullable = false)
-    private String houseStatus;
+    private String houseStatus = "Unsold";
 
 }

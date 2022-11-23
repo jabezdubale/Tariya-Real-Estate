@@ -13,6 +13,7 @@ public class AccountEditor {
 
     private Long editorID;
     private String editorName;
+    private String editorPropic;
     private String editorPhone;
     private String editorEmail;
     @Temporal(TemporalType.DATE)

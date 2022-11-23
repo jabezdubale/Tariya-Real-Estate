@@ -9,9 +9,11 @@ public class RealEstateEditor {
 
     private Long editorRsId;
     private Long editorRsSellerId;
-    private String editorRsLocation;
+    private String editorLatitude;
+    private String editorLongitude;
     private String editorRsHouseType;
     private Double editorRsPrice;
+    private String editorPictures;
     private String editorRsDescription;
     private String editorRsVerificationDocs;
     private Long editorRsVerificationStatus;

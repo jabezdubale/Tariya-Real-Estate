@@ -43,8 +43,12 @@ public class RealEstateService {
             editedRs.setSellerId(realEstateEditor.getEditorRsSellerId());
         }
 
-        if (realEstateEditor.getEditorRsLocation() != null){
-            editedRs.setLocation(realEstateEditor.getEditorRsLocation());
+        if (realEstateEditor.getEditorLatitude() != null){
+            editedRs.setLocationLatitude(realEstateEditor.getEditorLatitude());
+        }
+
+        if (realEstateEditor.getEditorLongitude() != null){
+            editedRs.setLocationLongitude(realEstateEditor.getEditorLongitude());
         }
         if (realEstateEditor.getEditorRsHouseType() != null){
             editedRs.setHouseType(realEstateEditor.getEditorRsHouseType());
