@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RealEstate {
-
+//database must be updated
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
