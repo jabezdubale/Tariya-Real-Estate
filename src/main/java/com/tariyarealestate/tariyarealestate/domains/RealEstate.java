@@ -40,7 +40,7 @@ public class RealEstate {
     @Column(nullable = false)
     private Double price;
 
-    private String rsPictures = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    private String rsPictures = "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
     @NotBlank(message = "Specify as much detail about the Real-Estate as possible")
     @Column(nullable = false)
